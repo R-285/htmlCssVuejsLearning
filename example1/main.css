@@ -1,0 +1,63 @@
+p.text:not(:empty){     /*обращаюсь ко всем абзацам (p) с классом text и не пустые*/
+    color:grey;
+}
+
+p.text:empty::after{     /*обращаюсь к последующему пространству к всех
+абзацам (p) класса text и пустые */
+    content: attr(title);
+}
+
+#some_id::after{    /*Обращаемся за невидимой частью за объектом*/
+    content: '123';
+    color: darkblue;
+}
+
+p.main_link::first-letter{      /*Первый символ абзацев main_link*/
+    color: green;
+}
+
+.main_link {
+    color: purple;
+    text-decoration: none;
+}
+
+.main_link:hover {  /*Наведение*/
+    color: blue;
+    text-decoration: overline;
+    text-decoration-color: red;
+    cursor: pointer;
+}
+
+.main_link:active { /*активная часть формы (бывает disabled)*/
+    text-decoration: line-through;
+}
+
+.main_link:visited { /*ранее посещенная ссылка*/
+    color:grey;
+}
+
+input:required{ /*обязательно надо что-то вести*/
+
+}
+
+input {
+    color:blue;
+}
+
+input:focus {   /*находится курсор там*/
+    color:red;
+}
+
+
+
+.main-text {
+    color: red;
+}
+
+#text-in-p{
+    color: blue;
+}
+
+div p b, div i{
+    color: green;
+}

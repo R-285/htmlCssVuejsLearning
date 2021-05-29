@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main_text {
+    color: #000;
+    text-align: center;         /*по центру*/
+    font-size: 2em;             /*размер текста*/
+    font-style: normal;         /*курсив ли?*/
+    font-weight: bold;
+    font-family: 'Odibee Sans', cursive;
+
+    text-transform: uppercase;  /*трансформация текста*/
+    word-spacing: 20px;         /*расстояние между словами*/
+    letter-spacing: 2px;        /*расстояние между буквами*/
+    line-height: 50px;          /*расстояние между строками*/
+    cursor: copy;
+}
+
+
+/*---------------------------------------------------*/
+.block{
+    font-size: 2em;
+    background: red;
+    height: 200px;
+    width: 50%;
+    border: 7px dotted silver;  /*тип границы*/
+    border-bottom: 0;
+    border-top-style: solid;
+
+    border-radius: 15px 30%;    /*скругление углов*/
+    opacity: 0.9;               /*прозрачность*/
+    margin-left: 20px;          /*отступ с левой стороны*/
+    padding: 20px;              /*отступы для текста*/
+
+    display: block;
+}

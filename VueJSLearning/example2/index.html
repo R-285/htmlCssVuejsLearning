@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<div id="app">
+    <span @mouseover="changeText">Текст</span>      <!--Событие changeText когда навели мышь на текст-->
+    <p>{{ title }}</p>                              <!--Сюда записывается значение переменной title-->
+    <p v-bind:class="styleCSS">Цвет: {{ styleCSS }}</p>     <!--Классу этого поля присванивается значение переменной styleCSS-->
+    <input type="text" v-on:input="styleCSS = $event.target.value">     <!--При событии "ВВод текста" styleCSS присвается значение поля-->
+</div>
+<hr/>
+<div id="anotherApp">
+    <input type="text" v-on:input="increment ($event.target.value)">    <!--При событии "Ввод текста" вызывается функция increment с параметром value-->
+    <p>{{value}}</p>                                <!--Этому полю присваевается значение value-->
+    <p>{{doubleValue}}</p>                         <!-- А этому значение возвращаемое из функции doubleValue-->
+</div>
+<hr/>
+
+<div id="oneMoreApp">
+    <button v-on:click="show = !show">Скрыть/показать</button>
+    <p v-if="show">Текст, который может стать невидимым</p>     <!-- Если v-if == true, то тег работает-->
+    <p v-else>{{message | lowercase | capitalize}}</p>     <!-- else к предыдущему. Вывод message -->
+<!-- причем применяем к нему фильтры lowercase, а затем фильтр capitalize-->
+    <ul>
+        <li v-for="car in cars">{{car.model}} носится со скоростью {{car.speed}} км/ч</li>                    <!-- цикл foreach где в car поочередно записывается значение из cars-->
+<!--        Теперь вывод с индексами-->
+        <li v-for="(car,i) in cars">{{i+1}}). {{car.model}} носится со скоростью {{car.speed}} км/ч</li>                    <!-- цикл foreach где в car поочередно записывается значение из cars-->
+    </ul>
+</div>
+<hr/>
+
+<div id="someComponents">
+    <app-car></app-car>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

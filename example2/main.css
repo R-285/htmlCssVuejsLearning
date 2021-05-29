@@ -1,0 +1,17 @@
+#first {
+    /*
+    background-color: #4ea8dc;
+    background-image: url('https://www.gensh.in/wallpaper/genshin/genshin_12_4K.jpg');
+    background-repeat: no-repeat;
+    background-position: center;*/
+
+    color: #3c3e40;
+    background: #4ea8dc url('https://www.gensh.in/wallpaper/genshin/genshin_12_4K.jpg') no-repeat left top;
+    height: 800px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#second {
+    height: 2000px;
+}
